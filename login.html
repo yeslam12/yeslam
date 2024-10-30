@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة تسجيل الدخول</title>
+    <style>
+
+input::placeholder{
+    
+    color: #fff;
+    
+}
+
+
+
+        body {
+            background:url("img.jpg") ;  
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            overflow: hidden;
+            backdrop-filter: blur(5px) ;
+            
+        }
+
+        .sidebar  {
+           
+            color: white;
+            width: 200px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            transform: translateX(-100%); 
+            position: absolute;
+            height: 100%;
+            z-index: 9;
+        }
+
+        .sidebar.open {
+            transform:perspective(0); 
+        }
+
+        .sidebar h2 {
+            font-size: 30px;
+        }
+
+        .sidebar ul {
+            list-style-type: circle;
+            font-family: 'Amiri', sans-serif;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 25px 0;
+        }
+
+        .sidebar ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            transition: color 0.3s;
+            text-shadow: 0 0 19px rgb(255, 255, 255);
+        }
+
+        .sidebar ul li a:hover {
+            color: #bc00c6;
+            text-shadow: 0 0 19px #ffffff;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background-color: rgba(243, 243, 243, 0.8);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .container {
+            flex:2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        .login-box {
+            color: #ffffff;
+            backdrop-filter: blur (10px);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: fadeIn 0.9s ease-in; /* انميشن للدخول */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 5;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 3;
+                transform: translateY(0);
+            }
+        }
+
+        .login-box h2 {
+            margin: 0 0 20px;
+            
+
+        }
+
+        .textbox {
+            margin-bottom: 30px;
+            
+        }
+
+        .textbox input {
+            width: 90%;
+            padding: 10px;
+            border: 0.5px solid #ffffff;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(to right, #cf00fe, #6e029c);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.9s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to right, #6e029c, #cf00fe);
+            transform: scale(1.2); /* تكبير */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar"> 
+        <h2  style="font-family: 'Reem Kufi', sans-serif;  "    >القائمة الجانبية</h2>
+       
+
+        <ul  >
+            <li><a href="Who are we.html">من نحن ؟</a></li>
+            <li><a href="social.html"> حساباتنا </a></li>
+            <li><a href="Get a discount code ar.html"> أحصل على كود خصم</a></li>
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <li><a href="login,en.html">  English  </a></li>
+
+        </ul>
+    </div>
+    
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ </button>
+    <div class="container">
+        <div class="login-box">
+            <h2 style="color: #ffffff; font-family: 'Tajawal', sans-serif ; text-align: center;"   >تسجيل الدخول</h2>
+           
+            <form action="grades.html"   >
+                <div class="textbox"  >
+                    <input " type="text"  style="backdrop-filter: blur(5px); border-radius: 20px  ;  background-color: transparent; text-align: center; "  placeholder="رقم جلوس الطالب " required>
+                </div>
+                <div class="textbox">
+                    <input type="password"  style="backdrop-filter: blur(5px); border-radius: 20px  ;  background-color: transparent;  text-align: center;  ;  "  placeholder="كلمة المرور" required>
+                </div>
+                <button type="submit" class="btn"    >تسجيل الدخول</button>
+          
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

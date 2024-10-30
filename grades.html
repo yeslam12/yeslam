@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة درجات الطلاب</title>
+    <style>
+        body {
+            background:url("img.jpg") ; 
+            font-family: 'Almarai', sans-serif ;
+            color: #cf00fe;
+            text-align: center;
+            backdrop-filter: blur(5px) ;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .grades-table {
+            margin: 1px auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        .grades-table th, .grades-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .grades-table th {
+            border: 1px solid #ffffff;
+            color: cf00fe;
+        }
+        .grades-table tr:nth-child(even) {
+           align-self: start;
+        }
+        .grades-table tr:hover {
+            background-color: #fffefe;
+            box-shadow: 0 0 25px rgb(255, 255, 255) ;
+        }
+        .header {
+            font-family: 'Reem Kufi', sans-serif;
+            color: white;
+            padding: 100px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">د ر جــا ت ا لــطــلا ب</div>
+    <table class="grades-table">
+        <tr>
+            <th>الدرجة</th>
+            <th>المادة</th>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>رياضيات</td>
+        </tr>
+        <tr>
+            <td>70</td>
+            <td>عربي</td>
+        </tr>
+        <tr>
+            <td>90</td>
+            <td>قران</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>اسلامية</td>
+        </tr>
+    </table>
+
+
+<h3><a href="login.html" style="color: #fffefe; text-decoration: none; text-shadow:  0 0 10px#ffffff;    "     >العودة للصفحة الرئيسية</a></h3>
+</body>
+</html>
